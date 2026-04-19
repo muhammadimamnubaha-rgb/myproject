@@ -5,11 +5,39 @@
 </head>
 <body>
 
-    <h1>Website Django Saya</h1>
-    <hr>
+    <!-- HEADER -->
+    <div style="text-align:center;">
+        <h1>Website Django Saya</h1>
+        <hr>
+    </div>
 
-    {% block content %}
-    {% endblock %}
+    <!-- LAYOUT -->
+    <div style="display:flex;">
+
+        <!-- SIDEBAR -->
+        <div style="width:20%; border-right:1px solid black; padding:10px;">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/hello/">Hello</a></li>
+                <li><a href="/daftar/">Daftar Artikel</a></li>
+                <li><a href="/tambah/">Tambah Artikel</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTENT -->
+        <div style="width:80%; padding:10px;">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <hr>
+    <div style="text-align:right;">
+        <p>© 2026 - Website Django Imam</p>
+    </div>
 
 </body>
 </html>

@@ -1,8 +1,27 @@
 from django.db import models
 
+
 class Artikel(models.Model):
     judul = models.CharField(max_length=200)
     isi = models.TextField()
 
     def __str__(self):
         return self.judul
+
+    class Meta:
+        db_table = "artikel"
+
+
+
+class Employee(models.Model):
+    empno = models.CharField(max_length=20)
+    empname = models.CharField(max_length=100)
+    alamat = models.CharField(max_length=100, null=True)
+    salary = models.IntegerField()
+    joined_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.empname} ({self.empno})"
+
+    class Meta:
+        db_table = "employee"
