@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Halaman Hello{% endblock %}
+
+{% block content %}
+
+<h2>Hello World!!!</h2>
+<p>Hari ini: {{ today }}</p>
+
+{% if today.day == 1 %}
+    <p>Ini awal bulan</p>
+{% elif today.day == 30 %}
+    <p>Ini akhir bulan</p>
+{% else %}
+    <p>Hari biasa</p>
+{% endif %}
+
+<h3>Hari dalam seminggu:</h3>
+
+<ul>
+    {% for day in days_of_week %}
+        <li>{{ day }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
