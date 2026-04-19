@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.db import models
+from django.db import models
 
 class Artikel(models.Model):
     judul = models.CharField(max_length=200)
@@ -25,3 +26,13 @@ class Employee(models.Model):
 
     class Meta:
         db_table = "employee"
+
+class Dreamreal(models.Model):
+    name = models.CharField(max_length=100)
+
+class Profile(models.Model):
+    name = models.CharField(max_length=50)
+    picture = models.ImageField(upload_to='pictures')
+
+    class Meta:
+        db_table = "profile"

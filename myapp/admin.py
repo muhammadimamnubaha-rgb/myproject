@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Artikel, Employee
-
+from .models import Dreamreal
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
@@ -13,3 +13,5 @@ class EmployeeAdmin(admin.ModelAdmin):
 class ArtikelAdmin(admin.ModelAdmin):
     list_display = ("judul",)
     search_fields = ("judul",)
+
+admin.site.register(Dreamreal)
