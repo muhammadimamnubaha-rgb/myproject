@@ -1,0 +1,11 @@
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    Emp No: <input type="text" name="empno"><br>
+    Nama: <input type="text" name="empname"><br>
+    Contact: <input type="text" name="contact"><br>
+    Salary: <input type="number" name="salary"><br>
+
+    <button type="submit">Simpan</button>
+</form>

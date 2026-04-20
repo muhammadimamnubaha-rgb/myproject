@@ -1,0 +1,24 @@
+<h2>Data Dreamreal</h2>
+
+<p>Nama: {{ dreamreal.name }}</p>
+<p>Website: {{ dreamreal.website }}</p>
+
+<hr>
+
+<h3>Komentar</h3>
+
+{% for c in comments %}
+    <p><b>{{ c.nama }}</b>: {{ c.isi }}</p>
+{% empty %}
+    <p>Belum ada komentar</p>
+{% endfor %}
+
+<hr>
+
+<h3>Tambah Komentar</h3>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Kirim</button>
+</form>

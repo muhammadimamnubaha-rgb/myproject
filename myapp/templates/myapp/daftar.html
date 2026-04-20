@@ -1,0 +1,30 @@
+<h2>Daftar Artikel</h2>
+
+{% for item in data %}
+    <p>
+        <b>{{ item.judul }}</b><br>
+        {{ item.isi }} <br>
+        <a href="/edit/{{ item.id }}/">Edit</a> |
+        <a href="/hapus/{{ item.id }}/">Hapus</a>
+    </p>
+{% empty %}
+    <p>Belum ada artikel</p>
+{% endfor %}
+
+{% extends "myapp/base.html" %}
+
+{% block content %}
+<h2>Daftar Artikel</h2>
+
+{% for item in data %}
+    <p>
+        <b>{{ item.judul }}</b><br>
+        {{ item.isi }} <br>
+        <a href="/edit/{{ item.id }}/">Edit</a> |
+        <a href="/hapus/{{ item.id }}/">Hapus</a>
+    </p>
+{% empty %}
+    <p>Belum ada artikel</p>
+{% endfor %}
+
+{% endblock %}

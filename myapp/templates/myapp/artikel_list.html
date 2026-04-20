@@ -1,0 +1,13 @@
+<ul>
+    {% for artikel in data %}
+        <li>
+            <b>{{ artikel.judul }}</b><br>
+            {{ artikel.isi }}<br>
+
+            <a href="/edit/{{ artikel.id }}/">Edit</a> |
+            <a href="/hapus/{{ artikel.id }}/">Hapus</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="/tambah/">Tambah Artikel</a>

@@ -1,0 +1,9 @@
+<h1>Daftar Artikel</h1>
+
+<ul>
+    {% for item in data %}
+        <li>{{ item.judul }}</li>
+    {% empty %}
+        <li>Tidak ada data</li>
+    {% endfor %}
+</ul>
